@@ -157,11 +157,6 @@
     <string name="title_pref_start_scan_immediate">Start scanning immediately</string>
     <string name="summary_pref_start_scan_immediate">Open the camera to scan immediately at startup, otherwise you can choose to scan the code or select a photo in the toolbar</string>
 
-    <string name="title_pref_feedback">Feedback</string>
-    <string name="summary_pref_feedback">Feedback enhancements or bugs to GitHub</string>
-    <string name="summary_pref_tg_group">Join Telegram Group</string>
-    <string name="toast_tg_app_not_found">Telegram app not found</string>
-
     <string name="title_core_loglevel">Log Level</string>
     <string name="title_mode">Mode</string>
     <string name="title_mode_help">Click me for more help</string>

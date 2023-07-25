@@ -667,9 +667,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             R.id.user_asset_setting -> {
                 startActivity(Intent(this, UserAssetActivity::class.java))
             }
-            R.id.feedback -> {
-                Utils.openUri(this, AppConfig.v2rayNGIssues)
-            }
             R.id.logcat -> {
                 startActivity(Intent(this, LogcatActivity::class.java))
             }

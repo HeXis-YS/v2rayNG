@@ -149,11 +149,6 @@
     <string name="title_pref_start_scan_immediate">立即启动扫码</string>
     <string name="summary_pref_start_scan_immediate">启动时立即打开相机扫描，否则可在工具栏选择扫码或选照片</string>
 
-    <string name="title_pref_feedback">反馈</string>
-    <string name="summary_pref_feedback">反馈改进或漏洞至 GitHub</string>
-    <string name="summary_pref_tg_group">加入Telegram Group</string>
-    <string name="toast_tg_app_not_found">未找到Telegram app</string>
-
     <string name="title_core_loglevel">日志级别</string>
     <string name="title_mode">模式</string>
     <string name="title_mode_help">点此查看更多帮助</string>
