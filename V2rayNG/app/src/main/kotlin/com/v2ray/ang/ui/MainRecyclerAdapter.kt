@@ -171,16 +171,6 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
                 }
             }
         }
-        if (holder is FooterViewHolder) {
-            //if (activity?.defaultDPreference?.getPrefBoolean(AppConfig.PREF_INAPP_BUY_IS_PREMIUM, false)) {
-            if (true) {
-                holder.itemFooterBinding.layoutEdit.visibility = View.INVISIBLE
-            } else {
-                holder.itemFooterBinding.layoutEdit.setOnClickListener {
-                    Utils.openUri(mActivity, "${Utils.decode(AppConfig.promotionUrl)}?t=${System.currentTimeMillis()}")
-                }
-            }
-        }
     }
 
     private fun shareFullContent(guid: String) {

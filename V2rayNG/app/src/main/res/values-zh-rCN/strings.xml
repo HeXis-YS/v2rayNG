@@ -154,9 +154,6 @@
     <string name="summary_pref_tg_group">加入Telegram Group</string>
     <string name="toast_tg_app_not_found">未找到Telegram app</string>
 
-    <string name="title_pref_promotion">推广</string>
-    <string name="summary_pref_promotion">一些推广,点击查看详情(捐赠可去除)</string>
-
     <string name="title_core_loglevel">日志级别</string>
     <string name="title_mode">模式</string>
     <string name="title_mode_help">点此查看更多帮助</string>
