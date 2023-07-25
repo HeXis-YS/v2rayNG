@@ -372,10 +372,6 @@ object Utils {
             "auto" ->  getSysLocale()
             "en" -> Locale("en")
             "zh-rCN" -> Locale("zh", "CN")
-            "zh-rTW" -> Locale("zh", "TW")
-            "vi" -> Locale("vi")
-            "ru" -> Locale("ru")
-            "fa" -> Locale("fa")
             else -> getSysLocale()
         }
 

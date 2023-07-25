@@ -161,10 +161,6 @@
         <item>auto</item>
         <item>English</item>
         <item>中文简体</item>
-        <item>中文繁體</item>
-        <item>Tiếng Việt</item>
-        <item>Русский</item>
-        <item>فارسی</item>
     </string-array>
 
 
@@ -172,9 +168,5 @@
         <item>auto</item>
         <item>en</item>
         <item>zh-rCN</item>
-        <item>zh-rTW</item>
-        <item>vi</item>
-        <item>ru</item>
-        <item>fa</item>
     </string-array>
 </resources>
