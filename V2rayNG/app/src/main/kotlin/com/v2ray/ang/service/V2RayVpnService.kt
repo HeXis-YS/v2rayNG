@@ -202,7 +202,7 @@ class V2RayVpnService : VpnService(), ServiceControl {
                 "--tunmtu", VPN_MTU.toString(),
                 "--sock-path", "sock_path",//File(applicationContext.filesDir, "sock_path").absolutePath,
                 "--enable-udprelay",
-                "--loglevel", "notice")
+                "--loglevel", settingsStorage?.decodeString(AppConfig.PREF_TUN2SOCKS_LOGLEVEL))
 
         if (settingsStorage?.decodeBool(AppConfig.PREF_PREFER_IPV6) == true) {
             cmd.add("--netif-ip6addr")

@@ -157,7 +157,8 @@
     <string name="title_pref_start_scan_immediate">Start scanning immediately</string>
     <string name="summary_pref_start_scan_immediate">Open the camera to scan immediately at startup, otherwise you can choose to scan the code or select a photo in the toolbar</string>
 
-    <string name="title_core_loglevel">Log Level</string>
+    <string name="title_core_loglevel">Xray-Core Log Level</string>
+    <string name="title_tun2socks_loglevel">Tun2Socks Log Level</string>
     <string name="title_mode">Mode</string>
     <string name="title_mode_help">Click me for more help</string>
     <string name="title_language">Language</string>

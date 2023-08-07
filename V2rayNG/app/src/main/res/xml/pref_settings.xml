@@ -117,6 +117,14 @@
             android:title="@string/title_core_loglevel" />
 
         <ListPreference
+            android:defaultValue="notice"
+            android:entries="@array/tun2socks_loglevel"
+            android:entryValues="@array/tun2socks_loglevel"
+            android:key="pref_tun2socks_loglevel"
+            android:summary="%s"
+            android:title="@string/title_tun2socks_loglevel" />
+
+        <ListPreference
                 android:defaultValue="VPN"
                 android:entries="@array/mode_entries"
                 android:entryValues="@array/mode_value"

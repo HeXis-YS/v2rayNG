@@ -34,6 +34,7 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
             AppConfig.PREF_SOCKS_PORT,
             AppConfig.PREF_HTTP_PORT,
             AppConfig.PREF_LOGLEVEL,
+            AppConfig.PREF_TUN2SOCKS_LOGLEVEL,
             AppConfig.PREF_LANGUAGE,
             AppConfig.PREF_ROUTING_DOMAIN_STRATEGY,
             AppConfig.PREF_ROUTING_MODE,
