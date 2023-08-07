@@ -96,6 +96,7 @@ object AngConfigManager {
             AppConfig.PREF_PREFER_IPV6,
             AppConfig.PREF_PER_APP_PROXY,
             AppConfig.PREF_BYPASS_APPS,
+            AppConfig.PREF_LIBXRAY_LOG_DISABLED,
         ).forEach { key ->
             settingsStorage?.encode(key, sharedPreferences.getBoolean(key, false))
         }

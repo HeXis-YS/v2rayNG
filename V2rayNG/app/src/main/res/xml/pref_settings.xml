@@ -124,6 +124,12 @@
             android:summary="%s"
             android:title="@string/title_tun2socks_loglevel" />
 
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="pref_libxray_log_disabled"
+            android:summary="@string/summary_libxray_log_disabled"
+            android:title="@string/title_libxray_log_disabled" />
+
         <ListPreference
                 android:defaultValue="VPN"
                 android:entries="@array/mode_entries"

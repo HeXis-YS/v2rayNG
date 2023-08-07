@@ -159,6 +159,8 @@
 
     <string name="title_core_loglevel">Xray-Core Log Level</string>
     <string name="title_tun2socks_loglevel">Tun2Socks Log Level</string>
+    <string name="title_libxray_log_disabled">Disable LibXray Log</string>
+    <string name="summary_libxray_log_disabled">Disable LibXray Log</string>
     <string name="title_mode">Mode</string>
     <string name="title_mode_help">Click me for more help</string>
     <string name="title_language">Language</string>

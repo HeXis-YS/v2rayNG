@@ -52,7 +52,8 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
             AppConfig.PREF_PER_APP_PROXY,
             AppConfig.PREF_BYPASS_APPS,
             AppConfig.PREF_CONFIRM_REMOVE,
-            AppConfig.PREF_START_SCAN_IMMEDIATE, -> {
+            AppConfig.PREF_START_SCAN_IMMEDIATE,
+            AppConfig.PREF_LIBXRAY_LOG_DISABLED, -> {
                 settingsStorage?.encode(key, sharedPreferences.getBoolean(key, false))
             }
             AppConfig.PREF_SNIFFING_ENABLED -> {

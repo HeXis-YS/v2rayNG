@@ -151,6 +151,8 @@
 
     <string name="title_core_loglevel">Xray-Core日志等级</string>
     <string name="title_tun2socks_loglevel">Tun2Socks日志等级</string>
+    <string name="title_libxray_log_disabled">禁用LibXray日志</string>
+    <string name="summary_libxray_log_disabled">禁用LibXray日志</string>
     <string name="title_mode">模式</string>
     <string name="title_mode_help">点此查看更多帮助</string>
     <string name="title_language">语言</string>
