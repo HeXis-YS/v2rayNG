@@ -25,7 +25,7 @@ import java.lang.ref.SoftReference
 
 class V2RayVpnService : VpnService(), ServiceControl {
     companion object {
-        private const val VPN_MTU = 1500
+        private const val VPN_MTU = 32767
         private const val PRIVATE_VLAN4_CLIENT = "26.26.26.1"
         private const val PRIVATE_VLAN4_ROUTER = "26.26.26.2"
         private const val PRIVATE_VLAN6_CLIENT = "da26:2626::1"
@@ -203,7 +203,7 @@ class V2RayVpnService : VpnService(), ServiceControl {
                 "--tunmtu", VPN_MTU.toString(),
                 "--sock-path", "sock_path",//File(applicationContext.filesDir, "sock_path").absolutePath,
                 "--enable-udprelay",
-                "--loglevel", "notice")
+                "--loglevel", "none")
 
         if (settingsStorage?.decodeBool(AppConfig.PREF_PREFER_IPV6) == true) {
             cmd.add("--netif-ip6addr")
