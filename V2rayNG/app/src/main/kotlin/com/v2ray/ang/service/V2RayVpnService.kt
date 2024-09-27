@@ -31,11 +31,11 @@ import java.lang.ref.SoftReference
 
 class V2RayVpnService : VpnService(), ServiceControl {
     companion object {
-        private const val VPN_MTU = 1500
-        private const val PRIVATE_VLAN4_CLIENT = "26.26.26.1"
-        private const val PRIVATE_VLAN4_ROUTER = "26.26.26.2"
-        private const val PRIVATE_VLAN6_CLIENT = "da26:2626::1"
-        private const val PRIVATE_VLAN6_ROUTER = "da26:2626::2"
+        private const val VPN_MTU = 65535
+        // private const val PRIVATE_VLAN4_CLIENT = "26.26.26.1"
+        private const val PRIVATE_VLAN4_ROUTER = "192.0.0.8"
+        // private const val PRIVATE_VLAN6_CLIENT = "da26:2626::1"
+        private const val PRIVATE_VLAN6_ROUTER = "3fff::"
         private const val TUN2SOCKS = "libtun2socks.so"
     }
 
@@ -117,7 +117,7 @@ class V2RayVpnService : VpnService(), ServiceControl {
         //val enableLocalDns = defaultDPreference.getPrefBoolean(AppConfig.PREF_LOCAL_DNS_ENABLED, false)
 
         builder.setMtu(VPN_MTU)
-        builder.addAddress(PRIVATE_VLAN4_CLIENT, 30)
+        builder.addAddress(PRIVATE_VLAN4_ROUTER, 32)
         //builder.addDnsServer(PRIVATE_VLAN4_ROUTER)
         val bypassLan = SettingsManager.routingRulesetsBypassLan()
         if (bypassLan) {
@@ -130,7 +130,7 @@ class V2RayVpnService : VpnService(), ServiceControl {
         }
 
         if (settingsStorage?.decodeBool(AppConfig.PREF_PREFER_IPV6) == true) {
-            builder.addAddress(PRIVATE_VLAN6_CLIENT, 126)
+            builder.addAddress(PRIVATE_VLAN6_ROUTER, 128)
             if (bypassLan) {
                 builder.addRoute("2000::", 3) //currently only 1/8 of total ipV6 is in use
             } else {
@@ -206,12 +206,12 @@ class V2RayVpnService : VpnService(), ServiceControl {
         val cmd = arrayListOf(
             File(applicationContext.applicationInfo.nativeLibraryDir, TUN2SOCKS).absolutePath,
             "--netif-ipaddr", PRIVATE_VLAN4_ROUTER,
-            "--netif-netmask", "255.255.255.252",
+            "--netif-netmask", "255.255.255.255",
             "--socks-server-addr", "127.0.0.1:${socksPort}",
             "--tunmtu", VPN_MTU.toString(),
             "--sock-path", "sock_path",//File(applicationContext.filesDir, "sock_path").absolutePath,
-            "--enable-udprelay",
-            "--loglevel", "notice"
+            "--socks5-udp",
+            "--loglevel", "none"
         )
 
         if (settingsStorage?.decodeBool(AppConfig.PREF_PREFER_IPV6) == true) {
