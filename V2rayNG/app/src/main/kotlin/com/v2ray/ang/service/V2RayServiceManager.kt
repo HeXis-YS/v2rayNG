@@ -225,12 +225,12 @@ object V2RayServiceManager {
 
             when (intent?.action) {
                 Intent.ACTION_SCREEN_OFF -> {
-                    Log.d(ANG_PACKAGE, "SCREEN_OFF, stop querying stats")
+                    // Log.d(ANG_PACKAGE, "SCREEN_OFF, stop querying stats")
                     stopSpeedNotification()
                 }
 
                 Intent.ACTION_SCREEN_ON -> {
-                    Log.d(ANG_PACKAGE, "SCREEN_ON, start querying stats")
+                    // Log.d(ANG_PACKAGE, "SCREEN_ON, start querying stats")
                     startSpeedNotification()
                 }
             }
